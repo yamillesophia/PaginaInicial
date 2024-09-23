@@ -1,3 +1,48 @@
+
+/* Container da galeria usando flaxbox */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Cada item da galeria */
+.gallery-item {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+
+/* Estilo para as imagens */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Container da galeria usando Grid */
+.grid-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Cada item da galeria */
+.grid-gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Estilos para as imagens */
+.grid-gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
 /* Estilo menu */
 
 nav {
@@ -112,6 +157,37 @@ nav ul li:hover .dropdown-content {
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo para botao de baixo */
+
+.container {
+    text-align: center;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.meu-botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.meu-botao:hover {
+    background-color: #7a0096;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Estilo para container principal */
 .container {
     display: flex;
@@ -181,6 +257,8 @@ nav ul li:hover .dropdown-content {
 .image-button-container button:active {
     background-color: #360042;
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 /* Estilo geraldo footer */
 
@@ -257,4 +335,52 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+/* botao */
+.botao-login{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #e57dff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
