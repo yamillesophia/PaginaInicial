@@ -382,5 +382,20 @@ nav ul li a {
 }
 
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;;
+}
+
+/* botao cadastro */
+
+.botao-cadastro {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
 }
