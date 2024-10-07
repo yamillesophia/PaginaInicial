@@ -1,0 +1,424 @@
+
+/* Container da galeria usando flaxbox */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Cada item da galeria */
+.gallery-item {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+}
+
+/* Estilo para as imagens */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Container da galeria usando Grid */
+.grid-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Cada item da galeria */
+.grid-gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Estilos para as imagens */
+.grid-gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo menu */
+
+nav {
+    background-color: #7a0096; /* Cor de fundo do menu */
+    padding: 15px 20px; /* Espaçamento interno */
+}
+
+.menu {
+    list-style-type: none; /* Remove marcadores de lista */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.menu li {
+    margin-right: 30px; /* Espaço entre os itens */
+    position: relative; /* Para o dropdown */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fff; /* Cor do texto */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    transition: color 0.3s; /* Transição suave na cor */
+}
+
+.menu li a:hover {
+    color: #e57dff; /* Cor ao passar o mouse */
+}
+
+.dropdown-content {
+    display: none; /* Esconde o conteúdo do dropdown */
+    position: absolute; /* Posição absoluta para o dropdown */
+    background-color: #e57dff; /* Cor de fundo do dropdown */
+    min-width: 160px; /* Largura mínima do dropdown */
+    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o dropdown */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Mostra o conteúdo ao passar o mouse */
+}
+
+.dropdown-content li {
+    padding: 10px; /* Espaçamento interno do item */
+}
+
+.dropdown-content li a {
+    color: #7a0096; /* Cor do texto do dropdown */
+    text-decoration: none; /* Remove sublinhado dos links */
+    display: block; /* Faz o link ocupar toda a área do item */
+}
+
+.dropdown-content li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo ao passar o mouse */
+}
+
+button {
+    background-color: #e57dff; /* Cor do fundo dos botões */
+    border: none; /* Remove a borda padrão */
+    color: #7a0096; /* Cor do texto do botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    display: inline-flex; /* Alinha o texto e o botão corretamente */
+    align-items: center; /* Centraliza o texto verticalmente */
+}
+
+button a {
+    color: #7a0096; /* Cor do texto do botão */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+button:hover {
+    background-color: #7a0096; /* Cor ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilização do container do slider  */
+.slider {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    overflow: hidden; 
+    position: relative;
+}
+    
+/* Estilização do container das slides  */
+.slides {
+    display: flex; 
+    width: 98%;
+    animation: slideAnimation 9s infinite;
+}
+    
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+    
+    
+@keyframes slideAnimation {
+    0% {transform: translateX(0);}
+    33% {transform: translateX(-100%);}
+    66% {transform: translateX(-200%);}
+    100% {transform: translateX(0);}
+}
+    
+/* Estilização das imagens dentro dos slides  */
+.slide img {
+    width: 100%; 
+    display: block 
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo para botao de baixo */
+
+.container {
+    text-align: center;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.meu-botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.meu-botao:hover {
+    background-color: #7a0096;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Estilo para container principal */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Estilo para card */
+.card {
+    background-color: #e57dff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Titulo dos cards */
+.card h2{
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #7a0096;
+}
+
+/* Paragrafo dos cards */
+.card p {
+    color: #ddd;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo para imagem e botão lado a lado */
+
+.image-button-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 20px; /* Espaço entre a imagem e o botão */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 20px;
+}
+
+.image-button-container img {
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e57dff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.image-button-container button:hover {
+    background-color: #7a0096;
+    transform: scale(1.05);
+}
+
+.image-button-container button:active {
+    background-color: #360042;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Estilo geraldo footer */
+
+footer {
+    background-color: #e57dff;
+    color: white;
+    padding: 40px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 23%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #7a0096;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #7a0096;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links:hover {
+    color: #7a0096;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* botao */
+.botao-login{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #e57dff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;;
+}
+
+/* botao cadastro */
+
+.botao-cadastro {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* botao compra */
+
+.botao-compra {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #e57dff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
